@@ -78,8 +78,8 @@ $.calendar.init({
 
 // Event listener for date selection
 $.calendar.addEventListener('selected', function(e) {
-  console.log('Selected Date:', e.date);
   console.log('Active:', e.active);
+  console.log('Selected Date:', e.date);
 });
 ```
 
