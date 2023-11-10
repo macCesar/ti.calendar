@@ -68,11 +68,11 @@ Here's a basic example of how to use the `ti.calendar` widget:
 ```javascript
 // Initialize the calendar
 $.calendar.init({
-  active_dates: ['2023-10-10', '2023-10-15'],
-  current_date: '2023-10-01',
+  fontFamily: 'Arial',
   min_date: '2023-09-01',
   max_date: '2023-11-30',
-  fontFamily: 'Arial',
+  current_date: '2023-10-01',
+  active_dates: ['2023-10-10', '2023-10-15'],
   // Customize other properties as needed
 });
 
