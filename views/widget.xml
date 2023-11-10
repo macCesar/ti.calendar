@@ -1,24 +1,32 @@
 <Alloy>
-	<View id="main" >
-		<View id="header" class="bar">
-			<View class="hr" top="0" />
-			<View id="leftBtn" class="ctrlBtn" >
-				<ImageView id="leftArrow" />
-			</View>
-			<View class="headerText" >
-				<Label id="monthName" />
-				<Label id="monthYear" />
-			</View>
-			<View id="rightBtn" class="ctrlBtn" >
-				<ImageView id="rightArrow" />
-			</View>
-			<View class="hr" bottom="0" />
-		</View>
-		<View class="sp1/2" />
-		<View id="calendar" >
-			<View id="dayLabels" />
-			<View class="hr" height="2" backgroundColor="#fff" />
-			<ScrollableView id="monthScroll" />
-		</View>
-	</View>
+  <View id="main" onPostlayout="buildCalendar">
+    <View id="header" class="bar">
+      <View class="hr" top="0" />
+
+      <View id="leftBtn" class="ctrlBtn" onClick="movePrevious">
+        <ImageView id="leftArrow" />
+      </View>
+
+      <View class="headerText">
+        <Label id="monthName" />
+        <Label id="monthYear" />
+      </View>
+
+      <View id="rightBtn" class="ctrlBtn" onClick="moveNext">
+        <ImageView id="rightArrow" />
+      </View>
+
+      <View class="hr" bottom="0" />
+    </View>
+
+    <View class="sp1/2" />
+
+    <View id="calendar">
+      <View id="dayLabels" />
+
+      <View class="hr" height="2" backgroundColor="#fff" />
+
+      <ScrollableView id="monthScroll" onClick="clickMonthScroll" onScroll="doScroll" />
+    </View>
+  </View>
 </Alloy>
